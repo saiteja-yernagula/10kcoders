@@ -3,13 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>css styling</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1 style="text-align:center">
-        body is styled using external css
-    </h1>
     
+
+    <script>
+
+        //A function is a reusable block of code that is used to performs a specific task when something invokes
+        // A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+        // The code to be executed, by the function, is placed inside curly brackets: {}
+        // Function parameters are listed inside the parentheses () in the function definition.
+        //Function arguments are the values received by the function when it is invoked.
+        // Inside the function, the arguments (the parameters) behave as local variables.
+        //Named functions can be hoisted
+
+
+        
+        //General function
+        function myfun(a){
+            return console.log(a);
+            alert("it will not executie because it was in void")
+        }
+        myfun(20);
+
+
+
+        //arrow function is a concise way of writing function in shorter way
+
+        
+        var arfun=()=>{
+            return "this is arrow function"
+        }
+        console.log(arfun());
+
+
+
+        //anonymous function is a function that is defined without a name
+        //it is not hoisted bcoz variable stores undefined value while execution
+        var anonfun=function(){
+            return "this is anonymous function";
+        }
+        console.log(anonfun());
+
+        
+
+
+        //default parameters applied if we didn't mention any arguments
+        // values which areg= given to the parameters when it is defined
+        function hello(a=2,b=7){
+            return a+b;
+        } 
+        console.log(hello());
+
+
+       //immediate invoking functions
+       // An IIFE (Immediately Invoked Function Expression) is a function that runs as soon as it is defined. 
+        (function(){
+            console.log("self invoking function invoked by itself") ;
+        })();
+        
+
+        //callback function
+        
+        
+        function hello1(){
+            return "hello1 function is trigered by main function";
+        }
+        
+        function hello2(j){
+            var a=j();
+         return a;
+        }
+
+        console.log(hello2(hello1));
+
+
+
+
+
+
+
+
+
+    
+    </script>
 </body>
 </html>
